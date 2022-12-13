@@ -1,0 +1,23 @@
+<!-- Nav tabs -->
+<ul class="nav nav-tabs"
+    id="myTab"
+    role="tablist">
+  <li class="nav-item"
+      role="presentation">
+    <button class="nav-link active"
+            id="home-tab"
+            data-bs-toggle="tab"
+            [routerLink]="['/home']"
+            routerLinkActive="router-link-active"
+            type="button"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true">Home</button>
+  </li>
+
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <router-outlet></router-outlet>
+</div>
