@@ -11,22 +11,22 @@
         }
       },
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "main",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/hackathon-http2",
-            "index": "src/index.html",
-            "main": "src/main.ts",
+            "index": "main/index.html",
+            "main": "main/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": ["main/favicon.ico", "main/assets"],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
-              "src/styles.scss"
+              "main/styles.scss"
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.js"]
           },
@@ -81,8 +81,8 @@
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": ["main/favicon.ico", "main/assets"],
+            "styles": ["main/styles.scss"],
             "scripts": []
           }
         }
