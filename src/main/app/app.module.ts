@@ -8,6 +8,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { ContentsComponent } from './components/contents/contents.component';
 import { ArticleDataComponent } from './components/article-data/article-data.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
     BannerComponent,
     ContentsComponent,
     ArticleDataComponent,
+    FeedComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
