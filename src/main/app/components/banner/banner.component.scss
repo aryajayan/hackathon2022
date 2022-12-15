@@ -1,0 +1,36 @@
+.article-banner {
+  background-image: url("../../../assets/banner.jpg");
+  min-height: 450px;
+  background-position: 100%;
+
+  &__container {
+    width: 888px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+  }
+  &__eyebrow {
+    font-size: 16px;
+    font-weight: bold;
+    border-top: 2px solid #fff;
+    margin-top: 70px;
+  }
+  &__meta {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  &__headline {
+    font-size: 35px;
+    margin: 15px 0;
+  }
+  &__authors {
+    span {
+      text-decoration: underline;
+    }
+    font-size: 13px;
+    margin: 15px 0;
+  }
+}
