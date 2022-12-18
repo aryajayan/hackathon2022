@@ -35,10 +35,11 @@ export class FeedComponent implements OnInit {
   makeHttp2Calls() {
     const urls = [
       // 'https://java-httpnew.azurewebsites.net/api/status',
-      'https://java-httpnew.azurewebsites.net/api/get?wc=1000',
-      'https://java-httpnew.azurewebsites.net/api/get?wc=2000',
-      'https://java-httpnew.azurewebsites.net/api/get?wc=3000',
-      'https://java-httpnew.azurewebsites.net/api/get?wc=4000'
+      'https://java-httpnew.azurewebsites.net/api/companies',
+      'https://java-httpnew.azurewebsites.net/api/feedReports',
+      'https://java-httpnew.azurewebsites.net/api/getanalysts',
+      'https://java-httpnew.azurewebsites.net/api/getcollections',
+      'https://java-httpnew.azurewebsites.net/api/getperiodicals'
     ]
 
     const requests = urls.map((url) => fetch(url, { mode: 'no-cors' }));
@@ -52,10 +53,11 @@ export class FeedComponent implements OnInit {
   makeHttp1Calls() {
     const urls = [
       // 'https://java-httpold.azurewebsites.net/api/status',
-      'https://java-httpold.azurewebsites.net/api/get?wc=1000',
-      'https://java-httpold.azurewebsites.net/api/get?wc=2000',
-      'https://java-httpold.azurewebsites.net/api/get?wc=3000',
-      'https://java-httpold.azurewebsites.net/api/get?wc=4000'
+      'https://java-httpold.azurewebsites.net/api/companies',
+      'https://java-httpold.azurewebsites.net/api/feedReports',
+      'https://java-httpold.azurewebsites.net/api/getanalysts',
+      'https://java-httpold.azurewebsites.net/api/getcollections',
+      'https://java-httpold.azurewebsites.net/api/getperiodicals'
     ]
 
     const requests = urls.map((url) => fetch(url, { mode: 'no-cors' }));
