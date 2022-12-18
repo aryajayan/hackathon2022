@@ -9,6 +9,8 @@ import { ContentsComponent } from './components/contents/contents.component';
 import { ArticleDataComponent } from './components/article-data/article-data.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FeedComponent } from './feed/feed.component';
+import { ReportsComponent } from './reports/reports.component';
+import { ThemesComponent } from './themes/themes.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { FeedComponent } from './feed/feed.component';
     ContentsComponent,
     ArticleDataComponent,
     FeedComponent,
+    ReportsComponent,
+    ThemesComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
