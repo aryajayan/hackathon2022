@@ -37,13 +37,9 @@ export class ArticleDataComponent implements OnInit, OnChanges {
     }
   }
   setData() {
-    // this.http
-    //   .get('https://java-httpnew.azurewebsites.net/api/get?w=Portal&wc=300')
-    //   .subscribe((response: any) => {
-    //     this.articleIntro = response.data;
-    //   });
-
-    this.articleIntro = data.articleIntro;
+    let s1 = data.articleIntro.charAt(0);
+    let intro = data.articleIntro.replace(s1, '<strong>$&</strong>');
+    this.articleIntro = intro;
 
     this.para1 = data.para1;
     this.para2 = data.para2;
