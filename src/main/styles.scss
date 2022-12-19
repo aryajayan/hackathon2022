@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import "stylesheets/fonts.scss";
 * {
   box-sizing: border-box;
 }
 .container {
   max-width: none;
+}
+body {
+  font-family: "KarlaRegular";
 }

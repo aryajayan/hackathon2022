@@ -1,19 +1,12 @@
 <div class="contents__container">
-    <h2 class="contents__header">
-        CONTENTS
-    </h2>
-    <ul class="contents__list">
-        <li>
-            <span>Bottom Line</span>
-        </li>
-        <li>
-            <span>Summary</span>
-        </li>
-        <li>
-            <span>Article data sample1</span>
-        </li>
-        <li>
-            <span>Article data sample2</span>
-        </li>
-    </ul>
+  <h2 class="contents__header">
+    CONTENTS
+  </h2>
+  <ul class="contents__list">
+    <li *ngFor="let item of navItems"
+        (click)="contentClick(item.id)">
+      <span>{{item.name}}</span>
+    </li>
+
+  </ul>
 </div>

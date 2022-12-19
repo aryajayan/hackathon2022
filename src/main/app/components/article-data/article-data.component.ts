@@ -1,5 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 import data from '../../../assets/json/data.json';
 
 @Component({
@@ -7,7 +13,8 @@ import data from '../../../assets/json/data.json';
   templateUrl: './article-data.component.html',
   styleUrls: ['./article-data.component.scss'],
 })
-export class ArticleDataComponent implements OnInit {
+export class ArticleDataComponent implements OnInit, OnChanges {
+  @Input() selectedSection;
   articleIntro: string;
   para1: string;
   para2: string;
@@ -16,6 +23,18 @@ export class ArticleDataComponent implements OnInit {
 
   ngOnInit() {
     this.setData();
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    if (
+      changes['selectedSection'] &&
+      changes['selectedSection']['currentValue']
+    ) {
+      let selectedId = document.querySelector(
+        '#section' + changes['selectedSection']['currentValue']
+      ) as HTMLElement;
+      console.log(selectedId);
+      selectedId.scrollIntoView();
+    }
   }
   setData() {
     // this.http
