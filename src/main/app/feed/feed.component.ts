@@ -8,37 +8,95 @@ import { FeedService } from '../feed.service';
 })
 export class FeedComponent implements OnInit {
 
+  feedReports;
+
   constructor(private feedService: FeedService) { }
 
   ngOnInit(): void {
-    // this.feedService.getStatus().subscribe((status) => {
-    //   console.log(status);
-    // })
 
+    this.feedReports = [
+      {
+        'hl': 'Research Report 1',
+        'ab': 'This is a test article, used for research hackathon poc',
+        'pd': '1671375724943',
+        'a': { 'n': 'Author 1' }
+      },
+      {
+        'hl': 'Research Report 2',
+        'ab': 'This is a test article, used for research hackathon poc',
+        'pd': '1671375734943',
+        'a': { 'n': 'Author 2' }
+      },
+      {
+        'hl': 'Research Report 3',
+        'ab': 'This is a test article, used for research hackathon poc',
+        'pd': '1671375744943',
+        'a': { 'n': 'Author 3' }
+      },
+      {
+        'hl': 'Research Report 4',
+        'ab': 'This is a test article, used for research hackathon poc',
+        'pd': '1671375754943',
+        'a': { 'n': 'Author 4' }
+      },
+      {
+        'hl': 'Research Report 5',
+        'ab': 'This is a test article, used for research hackathon poc',
+        'pd': '1671375764943',
+        'a': { 'n': 'Author 5' }
+      },
+      {
+        'hl': 'Research Report 6',
+        'ab': 'This is a test article, used for research hackathon poc',
+        'pd': '1671375774943',
+        'a': { 'n': 'Author 6' }
+      },
+      {
+        'hl': 'Research Report 7',
+        'ab': 'This is a test article, used for research hackathon poc',
+        'pd': '1671375784943',
+        'a': { 'n': 'Author 7' }
+      },
+      {
+        'hl': 'Research Report 8',
+        'ab': 'This is a test article, used for research hackathon poc',
+        'pd': '1671375794943',
+        'a': { 'n': 'Author 8' }
+      },
+      {
+        'hl': 'Research Report 9',
+        'ab': 'This is a test article, used for research hackathon poc',
+        'pd': '1671375724943',
+        'a': { 'n': 'Author 9' }
+      },
+      {
+        'hl': 'Research Report 10',
+        'ab': 'This is a test article, used for research hackathon poc',
+        'pd': '1671375724943',
+        'a': { 'n': 'Author 10' }
+      }
+    ]
+    
     fetch('https://java-httpnew.azurewebsites.net/api/status', { mode: 'no-cors' }).then((response) => {
       this.makeHttp2Calls();
       console.log(response.json());
     })
 
-    fetch('https://java-httpold.azurewebsites.net/api/status', { mode: 'no-cors' }).then((response) => {
-      this.makeHttp1Calls();
-      console.log(response.json());
-    })
-
-
-    // this.makeHttp2Calls();
-    // this.makeHttp1Calls();
-
+    // fetch('https://java-httpold.azurewebsites.net/api/status', { mode: 'no-cors' }).then((response) => {
+    //   this.makeHttp1Calls();
+    //   console.log(response.json());
+    // })
   }
 
 
   makeHttp2Calls() {
     const urls = [
       // 'https://java-httpnew.azurewebsites.net/api/status',
-      'https://java-httpnew.azurewebsites.net/api/get?wc=1000',
-      'https://java-httpnew.azurewebsites.net/api/get?wc=2000',
-      'https://java-httpnew.azurewebsites.net/api/get?wc=3000',
-      'https://java-httpnew.azurewebsites.net/api/get?wc=4000'
+      'https://java-httpnew.azurewebsites.net/api/companies',
+      'https://java-httpnew.azurewebsites.net/api/feedReports',
+      'https://java-httpnew.azurewebsites.net/api/getanalysts',
+      'https://java-httpnew.azurewebsites.net/api/getcollections',
+      'https://java-httpnew.azurewebsites.net/api/getperiodicals'
     ]
 
     const requests = urls.map((url) => fetch(url, { mode: 'no-cors' }));
@@ -49,22 +107,23 @@ export class FeedComponent implements OnInit {
   }
 
 
-  makeHttp1Calls() {
-    const urls = [
-      // 'https://java-httpold.azurewebsites.net/api/status',
-      'https://java-httpold.azurewebsites.net/api/get?wc=1000',
-      'https://java-httpold.azurewebsites.net/api/get?wc=2000',
-      'https://java-httpold.azurewebsites.net/api/get?wc=3000',
-      'https://java-httpold.azurewebsites.net/api/get?wc=4000'
-    ]
+  // makeHttp1Calls() {
+  //   const urls = [
+  //     // 'https://java-httpold.azurewebsites.net/api/status',
+  //     'https://java-httpold.azurewebsites.net/api/companies',
+  //     'https://java-httpold.azurewebsites.net/api/feedReports',
+  //     'https://java-httpold.azurewebsites.net/api/getanalysts',
+  //     'https://java-httpold.azurewebsites.net/api/getcollections',
+  //     'https://java-httpold.azurewebsites.net/api/getperiodicals'
+  //   ]
 
-    const requests = urls.map((url) => fetch(url, { mode: 'no-cors' }));
+  //   const requests = urls.map((url) => fetch(url, { mode: 'no-cors' }));
 
-    Promise.all(requests)
-      .then((responses) => {
-        responses.map((response) => response.json()).map((res) => console.log(res));
-      })
-  }
+  //   Promise.all(requests)
+  //     .then((responses) => {
+  //       responses.map((response) => response.json()).map((res) => console.log(res));
+  //     })
+  // }
 
 
 

@@ -1,1 +1,8 @@
-<p>feed works!</p>
+<div class="feed">
+    <h2 class="header-title">MyFeed</h2>
+    
+    <div *ngIf="feedReports && feedReports.length">
+        <app-reports [reportsList]="feedReports"></app-reports>
+    </div>
+
+</div>

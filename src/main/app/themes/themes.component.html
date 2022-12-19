@@ -1,0 +1,8 @@
+<div class="feed">
+    <h2 class="header-title">Themes</h2>
+    
+    <div *ngIf="themesList && themesList.length">
+        <app-reports [reportsList]="themesList"></app-reports>
+    </div>
+
+</div>
