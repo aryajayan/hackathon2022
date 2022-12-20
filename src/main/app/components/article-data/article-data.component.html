@@ -5,6 +5,15 @@
     <p class="article-body__para">{{para1}}</p>
   </section>
 
+  <section id="section9">
+    <h2>Image Section 4</h2>
+    <figure> <img class="chart img-fluid"
+           src="../../../assets/image3.jpg"
+           alt="">
+      <figcaption>Source: unsplash.com</figcaption>
+    </figure>
+  </section>
+
   <section id="section2">
     <h2>Chart Content 1</h2>
     <figure>
@@ -74,7 +83,17 @@
     </figure>
   </section>
 
-  <section id="section10">
+  <section id="section{{10+i}}"
+           *ngFor="let item of imageList; let i=index;">
+    <h2>Image Section {{item.id}}</h2>
+    <figure> <img class="chart img-fluid"
+           [src]="item.src"
+           alt="">
+      <figcaption>{{item.caption}}</figcaption>
+    </figure>
+  </section>
+
+  <section id="section{{10+imageList.length}}">
     <h2>Summary</h2>
     <p class="article-body__para">{{para2}}</p>
   </section>

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import data from '../../../assets/json/data.json';
 
 @Component({
   selector: 'contents-component',
@@ -19,8 +20,11 @@ export class ContentsComponent implements OnInit {
       { name: 'Image Section 3', id: 7 },
       { name: 'Content Section 2', id: 8 },
       { name: 'Image Section 4', id: 9 },
-      { name: 'Summary', id: 10 },
     ];
+    data.imageList.forEach((item, index) => {
+      this.navItems.push({ name: 'Image Section ' + item.id, id: 10 + index });
+    });
+    this.navItems.push({ name: 'Summary', id: 10 + data.imageList.length });
   }
   contentClick(id) {
     this.contentClickEvent.emit(id);

@@ -18,6 +18,7 @@ export class ArticleDataComponent implements OnInit, OnChanges {
   articleIntro: string;
   para1: string;
   para2: string;
+  imageList: Array<any>;
 
   constructor(private http: HttpClient) {}
 
@@ -43,5 +44,6 @@ export class ArticleDataComponent implements OnInit, OnChanges {
 
     this.para1 = data.para1;
     this.para2 = data.para2;
+    this.imageList = data.imageList;
   }
 }

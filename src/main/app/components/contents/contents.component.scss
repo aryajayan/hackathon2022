@@ -1,17 +1,19 @@
 .contents {
   &__container {
-    padding: 20px 0;
+    padding: 0;
     margin-top: 100px;
     position: sticky;
-    top: 0;
+    top: 71px;
+    overflow-y: auto;
+    max-height: 100vh;
   }
 
   &__header {
     font-size: 20px;
     font-weight: bold;
     padding: 15px 0;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #eae9e9;
+    border-bottom: 1px solid #eae9e9;
     margin-bottom: 0;
   }
   &__list {
@@ -19,8 +21,20 @@
     list-style-type: none;
     li {
       padding: 15px 10px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #eae9e9;
       cursor: pointer;
     }
   }
+}
+::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #e0ddd9; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a3a3a3; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
 }

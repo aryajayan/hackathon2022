@@ -1,0 +1,26 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid #eae9e9;
+  z-index: 50;
+  .ms_logo {
+    font-size: 29px;
+    letter-spacing: -1px;
+  }
+  span.pipe {
+    font-size: 28px;
+    color: #8b8a8a;
+    font-family: "Karla-Light";
+  }
+  span.research-head {
+    font-family: "Karla-Bold";
+    font-size: 15px;
+    color: #434343;
+    position: relative;
+    top: -4px;
+    margin-right: 20px;
+  }
+  .mr10 {
+    margin-right: 10px;
+  }
+}
