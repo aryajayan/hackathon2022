@@ -33,7 +33,6 @@ export class ArticleDataComponent implements OnInit, OnChanges {
       let selectedId = document.querySelector(
         '#section' + changes['selectedSection']['currentValue']
       ) as HTMLElement;
-      console.log(selectedId);
       selectedId.scrollIntoView();
     }
   }
