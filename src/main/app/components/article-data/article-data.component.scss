@@ -1,4 +1,7 @@
 .article-body {
+  &__container {
+    padding-left: 15px;
+  }
   &__intro {
     margin-top: 20px;
     font-size: 31px;
@@ -14,6 +17,7 @@
   section {
     margin-bottom: 30px;
     border-bottom: 1px solid #ccc;
+    scroll-margin: 71px;
     h2 {
       margin-bottom: 20px;
     }
