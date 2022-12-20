@@ -3,10 +3,9 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-reports',
   templateUrl: './reports.component.html',
-  styleUrls: ['./reports.component.scss']
+  styleUrls: ['./reports.component.scss'],
 })
 export class ReportsComponent {
-
   @Input() reportsList;
   @Input() type;
   constructor() {
@@ -72,7 +71,6 @@ export class ReportsComponent {
     //     'a': { 'n': 'Author 10' }
     //   }
     // ]
-
   }
 
   openReport(item) {
