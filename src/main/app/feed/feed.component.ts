@@ -13,17 +13,17 @@ export class FeedComponent implements OnInit {
   constructor(private feedService: FeedService, private meta: Meta) {}
 
   ngOnInit(): void {
-    this.meta.updateTag({ property: 'og:title', content: 'YOUR_TITLE' });
-    this.meta.updateTag({
-      property: 'og:image',
-      content:
-        'https://ichef.bbci.co.uk/news/976/cpsprodpb/C764/production/_128044015_chinacovid.jpg',
-    });
-    this.meta.updateTag({
-      property: 'og:url',
-      content:
-        'https://victorious-river-02e938710.2.azurestaticapps.net/#/feed',
-    });
+    // this.meta.updateTag({ property: 'og:title', content: 'YOUR_TITLE' });
+    // this.meta.updateTag({
+    //   property: 'og:image',
+    //   content:
+    //     'https://ichef.bbci.co.uk/news/976/cpsprodpb/C764/production/_128044015_chinacovid.jpg',
+    // });
+    // this.meta.updateTag({
+    //   property: 'og:url',
+    //   content:
+    //     'https://victorious-river-02e938710.2.azurestaticapps.net/#/feed',
+    // });
     this.feedReports = [
       {
         hl: 'Research Report 1',
