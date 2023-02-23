@@ -6,7 +6,7 @@ import { ThemesComponent } from './themes/themes.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'homePage',
     component: HomeComponent,
   },
   {
@@ -22,11 +22,11 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/home',
+    redirectTo: '/homePage',
   },
   {
     path: '**',
-    redirectTo: '/home',
+    redirectTo: '/homePage',
   },
 ];
 
