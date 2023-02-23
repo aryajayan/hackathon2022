@@ -6,6 +6,7 @@ import {
   OnInit,
   SimpleChanges,
 } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import data from '../../../assets/json/data.json';
 
 @Component({
@@ -20,10 +21,11 @@ export class ArticleDataComponent implements OnInit, OnChanges {
   para2: string;
   imageList: Array<any>;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private metaService: Meta) {}
 
   ngOnInit() {
     this.setData();
+    this.addTags();
   }
   ngOnChanges(changes: SimpleChanges): void {
     if (
@@ -35,6 +37,12 @@ export class ArticleDataComponent implements OnInit, OnChanges {
       ) as HTMLElement;
       selectedId.scrollIntoView();
     }
+  }
+  addTags() {
+    this.metaService.addTag({
+      name: 'description',
+      content: this.articleIntro,
+    });
   }
   setData() {
     let s1 = data.articleIntro.charAt(0);
