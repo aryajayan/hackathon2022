@@ -21,11 +21,12 @@ export class ArticleDataComponent implements OnInit, OnChanges {
   para2: string;
   imageList: Array<any>;
 
-  constructor(private http: HttpClient, private metaService: Meta) {}
+  constructor(private http: HttpClient, private metaService: Meta) {
+    this.addTags();
+  }
 
   ngOnInit() {
     this.setData();
-    this.addTags();
   }
   ngOnChanges(changes: SimpleChanges): void {
     if (
@@ -40,8 +41,8 @@ export class ArticleDataComponent implements OnInit, OnChanges {
   }
   addTags() {
     this.metaService.addTag({
-      name: 'description',
-      content: this.para1,
+      property: 'og:description',
+      content: data.para1,
     });
   }
   setData() {

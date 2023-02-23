@@ -8,14 +8,14 @@ import { Meta } from '@angular/platform-browser';
 })
 export class BannerComponent implements OnInit {
   bannerContent;
-  constructor(private metaService: Meta) {}
-  ngOnInit(): void {
+  constructor(private metaService: Meta) {
     this.bannerContent = {
       title: 'Going for Growth',
       heroImage: '/assets/banner2.jpg',
     };
     this.addTag();
   }
+  ngOnInit(): void {}
 
   addTag(): void {
     this.metaService.addTag({
