@@ -41,7 +41,7 @@ export class ArticleDataComponent implements OnInit, OnChanges {
   addTags() {
     this.metaService.addTag({
       name: 'description',
-      content: this.articleIntro,
+      content: this.para1,
     });
   }
   setData() {
