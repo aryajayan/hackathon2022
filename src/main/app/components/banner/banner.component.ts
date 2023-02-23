@@ -10,11 +10,9 @@ export class BannerComponent implements OnInit {
   bannerContent;
   constructor(private metaService: Meta) {}
   ngOnInit(): void {
-    const baseUrl = window.location.protocol + '//' + window.location.hostname;
-    const imageUrl = baseUrl + '/assets/banner.jpg';
     this.bannerContent = {
       title: 'Going for Growth',
-      heroImage: '/assets/banner.jpg',
+      heroImage: '/assets/banner2.jpg',
     };
     this.addTag();
   }
