@@ -40,10 +40,10 @@ export class ArticleDataComponent implements OnInit, OnChanges {
     }
   }
   addTags() {
-    this.metaService.addTag({
-      property: 'og:description',
-      content: data.para1,
-    });
+    // this.metaService.addTag({
+    //   property: 'og:description',
+    //   content: data.para1,
+    // });
   }
   setData() {
     let s1 = data.articleIntro.charAt(0);
