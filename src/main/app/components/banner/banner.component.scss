@@ -1,7 +1,19 @@
 .article-banner {
   background-image: url("../../../assets/banner2.jpg");
   min-height: 450px;
-  background-position: 100%;
+  background-position: center;
+  background-size: cover;
+  .banner-wash {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .banner-wash,
+  .banner-wash::before {
+    position: absolute;
+    height: 450px;
+    width: 100%;
+    display: block;
+    left: 0;
+  }
 
   &__container {
     width: 888px;
@@ -10,6 +22,8 @@
     align-items: center;
     flex-direction: column;
     color: #fff;
+    z-index: 8;
+    position: relative;
   }
   &__eyebrow {
     font-size: 16px;
