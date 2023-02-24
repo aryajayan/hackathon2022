@@ -18,13 +18,13 @@ export class BannerComponent implements OnInit {
   ngOnInit(): void {}
 
   addTag(): void {
-    this.metaService.addTag({
-      property: 'og:image',
-      content: this.bannerContent.heroImage,
-    });
-    this.metaService.addTag({
-      property: 'og:title',
-      content: this.bannerContent.title,
-    });
+    // this.metaService.addTag({
+    //   property: 'og:image',
+    //   content: this.bannerContent.heroImage,
+    // });
+    // this.metaService.addTag({
+    //   property: 'og:title',
+    //   content: this.bannerContent.title,
+    // });
   }
 }
