@@ -4,26 +4,13 @@ const fs = require("fs");
 const app = express();
 
 const PORT = process.env.PORT || 3000;
-const indexPath = path.resolve(
-  __dirname,
-  "..",
-  "src",
-  "dist",
-  "hackathon-http2",
-  "index.html"
-);
+const indexPath = path.resolve(__dirname, "dist/hackathon-http2/index.html");
 
 // static resources should just be served as they are
-// app.use(
-//   express.static(
-//     path.resolve(__dirname, "..", "src", "dist", "hackathon-http2"),
-//     {
-//       maxAge: "30d",
-//     }
-//   )
-// );
-// here we serve the index.html page
-app.get("*", (req, res) => {
+app.get("*.*", express.static(path.resolve(__dirname, "dist/hackathon-http2")));
+
+// here we replace the tags in the index.html page and send them
+app.all("*", function (req, res) {
   fs.readFile(indexPath, "utf8", (err, htmlData) => {
     if (err) {
       console.error("Error during file reading", err);
