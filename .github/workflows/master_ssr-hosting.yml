@@ -29,8 +29,8 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
-          name: hackathon-http2
-          path: dist/
+          name: node-app
+          path: dist/hackathon-http2
 
   deploy:
     runs-on: ubuntu-latest
@@ -43,7 +43,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
-          name: hackathon-http2
+          name: node-app
 
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
