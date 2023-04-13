@@ -27,7 +27,7 @@ jobs:
           npm install &&
           npm run build &&
           cp server.js dist/hackathon-http2/server.js &&
-          cp node_modules dist/hackathon-http2/node_modules
+          cp -r node_modules dist/hackathon-http2/node_modules
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
