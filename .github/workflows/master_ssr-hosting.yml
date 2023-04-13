@@ -54,4 +54,4 @@ jobs:
           app-name: "SSR-Hosting"
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_741EDD008F944E77831494B1BA93BFE6 }}
-          package: .
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/dist/hackathon-http2
