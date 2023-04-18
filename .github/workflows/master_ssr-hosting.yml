@@ -22,10 +22,10 @@ jobs:
           node-version: '18.x'
 
       - name: npm install, build, and test
-        run: 
-          cd src &&
-          npm install &&
-          npm run build --if-present 
+        run: |
+          npm install
+          npm run build --if-present
+          npm run test --if-present
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'SSR-Hosting'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3D04D8EFB0B04834BD3FABDB4339687B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_272BBF4D476D4DF090E36F97BCB7568A }}
           package: .
