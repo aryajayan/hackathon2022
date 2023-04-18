@@ -27,6 +27,7 @@ jobs:
           npm install
           npm run build --if-present
           cp server.js dist/server.js
+          cp ../package.json dist/package.json
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
