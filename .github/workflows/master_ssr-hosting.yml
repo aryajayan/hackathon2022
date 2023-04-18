@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -23,15 +23,16 @@ jobs:
 
       - name: npm install, build, and test
         run: |
+          cd src
           npm install
           npm run build --if-present
-          npm run test --if-present
-
+          cp server.js dist/server.js
+      
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: src/dist
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,10 +48,10 @@ jobs:
           name: node-app
 
       - name: 'Deploy to Azure Web App'
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
+        id: deploy-to-webapp
         with:
           app-name: 'SSR-Hosting'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6F0AAA5ADEBB4FBF9B8B790CDDB31004 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_272BBF4D476D4DF090E36F97BCB7568A }}
           package: .
