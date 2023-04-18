@@ -4,10 +4,10 @@ const fs = require("fs");
 const app = express();
 
 const PORT = process.env.PORT || 3000;
-const indexPath = path.resolve(__dirname, "dist/hackathon-http2/index.html");
+const indexPath = path.resolve(__dirname, "hackathon-http2/index.html");
 
 // static resources should just be served as they are
-app.get("*.*", express.static(path.resolve(__dirname, "dist/hackathon-http2")));
+app.get("*.*", express.static(path.resolve(__dirname, "hackathon-http2")));
 
 // here we replace the tags in the index.html page and send them
 app.all("*", function (req, res) {
